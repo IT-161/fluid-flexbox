@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A responsive e-commerce interface demonstrating Flexbox, logical CSS properties, and the box model."
+    >
+
+    <title>Week 3 Lab: Flexbox Interfaces</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- COMPONENT 1: MULTI-TIER HEADER -->
+    <header class="site-header">
+        <!-- Top Utility Bar -->
+        <div class="header__utility">
+            <span class="utility__promo">
+                Free shipping on orders over $50!
+            </span>
+
+            <nav
+                class="utility__nav"
+                aria-label="Utility navigation"
+            >
+                <a href="#support">Support</a>
+                <a href="#stores">Find a Store</a>
+            </nav>
+        </div>
+
+        <!-- Main Navigation Bar -->
+        <div class="header__main">
+            <a
+                class="header__logo"
+                href="#"
+                aria-label="StyleStore home"
+            >
+                StyleStore
+            </a>
+
+            <nav
+                class="header__nav"
+                aria-label="Main navigation"
+            >
+                <ul class="nav__list">
+                    <li>
+                        <a href="#new">New Arrivals</a>
+                    </li>
+
+                    <li>
+                        <a href="#shop">Shop All</a>
+                    </li>
+
+                    <li>
+                        <a href="#sale">Sale</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button
+                    class="btn-icon"
+                    type="button"
+                    aria-label="Search"
+                >
+                    <span aria-hidden="true">🔍</span>
+                </button>
+
+                <button
+                    class="btn-icon"
+                    type="button"
+                    aria-label="Shopping cart with 2 items"
+                >
+                    <span aria-hidden="true">🛒</span>
+
+                    <span class="cart-count">
+                        2
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- COMPONENT 2: CHECKOUT PAGE WRAPPER -->
+    <div class="checkout-container">
+        <main class="checkout-form-placeholder">
+            <h1>Shipping Details</h1>
+
+            <p>
+                Imagine your interactive shipping form inputs living right
+                here. This area represents the main checkout form.
+            </p>
+
+            <form class="shipping-form">
+                <div class="form-field">
+                    <label for="full-name">
+                        Full name
+                    </label>
+
+                    <input
+                        id="full-name"
+                        name="full-name"
+                        type="text"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="email">
+                        Email address
+                    </label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="address">
+                        Street address
+                    </label>
+
+                    <input
+                        id="address"
+                        name="address"
+                        type="text"
+                        autocomplete="street-address"
+                        required
+                    >
+                </div>
+
+                <button
+                    class="checkout-button"
+                    type="submit"
+                >
+                    Continue to Payment
+                </button>
+
+                <p
+                    class="form-message"
+                    aria-live="polite"
+                ></p>
+            </form>
+        </main>
+
+        <!-- Checkout Sidebar Summary -->
+        <aside
+            class="checkout-summary"
+            aria-labelledby="order-summary-title"
+        >
+            <h2
+                id="order-summary-title"
+                class="summary__title"
+            >
+                Order Summary
+            </h2>
+
+            <ul class="summary__items">
+                <li class="summary-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=100"
+                        alt="White minimalist T-shirt"
+                        class="summary-item__img"
+                        width="100"
+                        height="100"
+                    >
+
+                    <div class="summary-item__details">
+                        <span class="summary-item__name">
+                            Classic Crewneck T-Shirt
+                        </span>
+
+                        <span class="summary-item__qty">
+                            Qty: 1
+                        </span>
+                    </div>
+
+                    <span class="summary-item__price">
+                        $28.00
+                    </span>
+                </li>
+
+                <li class="summary-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100"
+                        alt="Red athletic sneakers"
+                        class="summary-item__img"
+                        width="100"
+                        height="100"
+                    >
+
+                    <div class="summary-item__details">
+                        <span class="summary-item__name">
+                            Retro Runners
+                        </span>
+
+                        <span class="summary-item__qty">
+                            Qty: 1
+                        </span>
+                    </div>
+
+                    <span class="summary-item__price">
+                        $85.00
+                    </span>
+                </li>
+            </ul>
+
+            <div class="summary__totals">
+                <div class="totals-line">
+                    <span>Subtotal</span>
+                    <span>$113.00</span>
+                </div>
+
+                <div class="totals-line">
+                    <span>Shipping</span>
+                    <span>FREE</span>
+                </div>
+
+                <div class="totals-line totals-line--grand">
+                    <span>Total</span>
+                    <span>$113.00</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <p>
+            &copy; 2026 StyleStore
+        </p>
+    </footer>
+</body>
+</html>
